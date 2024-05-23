@@ -3,19 +3,18 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
-  const { user,logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
 
-  const handleSignOut = () =>{
+  const handleSignOut = () => {
     logOut()
-      .then(result =>{
-        console.log(result,"There is no User")
+      .then((result) => {
+        console.log(result, "User log Out Successfully");
       })
-      .catch(error=>{
-        console.log(error.message)
-      })
-  }
-
-
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
 
   const navLinks = (
     <>
@@ -102,8 +101,26 @@ const Navbar = () => {
 
       <div className="navbar-end  ">
         <div className="md:flex md:gap-4 hidden">
+          {/* ----------------------------------------------------- */}
+
+          {user && (
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img src={user?.photoURL} />
+              </div>
+            </div>
+          )}
+
+          <div className="text-yellow-500 mt-2">{user && user?.email}</div>
+
           {user ? (
-            <button onClick={handleSignOut} className="btn">Sign Out</button>
+            <button onClick={handleSignOut} className="btn">
+              Log Out
+            </button>
           ) : (
             <Link to="login">
               <button className="btn text-green-500 font-extrabold">
@@ -112,11 +129,16 @@ const Navbar = () => {
             </Link>
           )}
 
-          <Link to="register">
-            <button className="btn text-pink-500 font-extrabold">
-              Register
-            </button>
-          </Link>
+          {
+            // ----------------
+            !user && (
+              <Link to="register">
+                <button className="btn text-pink-500 font-extrabold">
+                  Register
+                </button>
+              </Link>
+            )
+          }
         </div>
 
         {/* ___________This is Dark mode_________________ */}

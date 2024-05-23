@@ -19,15 +19,15 @@ const Header = () => {
         <span className="mt-4">
           <FaInstagram />
         </span>
-        {/* <div className="flex ml-10">
-          <span className="  text-orange-500 mr-2 text-2xl mt-2">
-            <MdOutlineAddIcCall />
-          </span>
-          <span>01919-613194</span>
-        </div> */}
+    
         <span className="-mt-1 ml-5">
           <BreakingNews></BreakingNews>
+
+
+
         </span>
+
+       
       </div>
       {/* -----------Breaking News----------------------- */}
 
