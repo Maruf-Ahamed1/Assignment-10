@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
@@ -23,17 +23,25 @@ const Login = () => {
 
 
 
-    const {signIn,googleLogin,setUser} = useContext(AuthContext)
+    const {signIn,googleLogin,setUser,githubLogin} = useContext(AuthContext)
   
+
+   //____After Register go Home page____//
+   const location = useLocation()
+   const navigate = useNavigate()
+   console.log("Location in the login page",location)
+
+  const pathName = location.state?.from?.pathname||'/'  //------------------------------
 
 
     const handleLogin = (event) =>{
         event.preventDefault();
-        console.log(event.currentTarget)
-        const form =new FormData(event.currentTarget)
-        const email = form.get('email')
-        const password = form.get('password')
-        console.log(email,password);
+        const form = event.target
+        const email = form.email.value
+        const password = form.password.value
+        const user = {email,password}
+        console.log(user)
+      
 
 
         //_____Reset error______//
@@ -58,6 +66,11 @@ const Login = () => {
       signIn(email,password)
       .then(result => {
         console.log(result.user)
+        event.target.reset()
+
+         //____navigate after login go to home____//
+      navigate(pathName,{replace:true})   //---------------------------------------------
+ 
       })
 
       .catch(error =>{
@@ -69,12 +82,29 @@ const Login = () => {
 
 
 
-// ----------Google Login_____//
+// _____Google Login_____//
     const handleGoogleLogin = () =>{
       googleLogin()
       .then(result =>{
         console.log(result)
+        setUser(result.user) //This line for login pic
+        // navigate(location?.state ? location.state : '/')
+        navigate(pathName,{replace:true})   //---------------------------------------------
+      })
+      .catch(error =>{
+        console.log(error.message)
+      })
+    }
+
+
+//_____GitHub Login_____//
+    const handleGitHubLogin = () =>{
+      githubLogin()
+      .then(result =>{
+        console.log(result)
         setUser(result.user)
+        // navigate(location?.state ? location.state : '/')
+        navigate(pathName,{replace:true})   //---------------------------------------------
       })
       .catch(error =>{
         console.log(error.message)
@@ -113,7 +143,7 @@ const Login = () => {
           <span><FcGoogle  className="text-3xl"/></span>
           Login with Google</button>
          <br /> <br />
-         <button className="btn btn-block text-xl">
+         <button onClick={handleGitHubLogin} className="btn btn-block text-xl">
           <span><FaGithub className="text-3xl" /></span>
           Login with GitHub</button>
       </div>

@@ -6,12 +6,15 @@ import Register from "../Pages/Register/Register";
 import AllArts from "../Pages/AllArts/AllArts";
 import AddCraft from "../Pages/AddCraft/AddCraft";
 import MyList from "../Pages/MyList/MyList";
+import NotFound from "../Pages/NotFound/NotFound";
+import PrivateRoute from "../Pages/PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <NotFound></NotFound>,
         children: [
             {
                 path: '/',
@@ -31,11 +34,15 @@ const router = createBrowserRouter([
             },
             {
                 path: '/add',
-                element:<AddCraft></AddCraft>
+                element:<PrivateRoute>
+                    <AddCraft></AddCraft>
+                </PrivateRoute>
             },
             {
                 path: '/my',
-                element:<MyList></MyList>
+                element:<PrivateRoute>
+                    <MyList></MyList>
+                </PrivateRoute>
             }
         ]
     }

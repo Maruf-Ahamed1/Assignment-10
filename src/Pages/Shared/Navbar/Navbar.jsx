@@ -62,8 +62,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
+    <div className="navbar bg-base-100 bg-fixed ">
+      <div className="navbar-start ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -89,7 +89,7 @@ const Navbar = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">
-          <img className="h-12 w-12 " src="/public/logo.png" alt="" />{" "}
+          <img className="h-12 w-12 " src="/logo.png" alt="" />{" "}
           <span className="text-pink-400 font-bold text-3xl">
             Ma<span className="text-green-600">K</span>er
           </span>

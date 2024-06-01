@@ -1,17 +1,20 @@
 const Home = () => {
   return (
     <div>
-      <h1 className="font-poppins font-extrabold">This is home</h1>
       <div className="carousel w-full">
-        {/* --------------111111-------------------- */}
-        <div id="slide1" className="carousel-item relative md:h-[800px] w-full">
+        {//_______________________--111111________________________ */}
+        <div id="slide1" className="carousel-item relative  w-full">
           <div
-            className="hero min-h-screen"
+            className="hero min-h-screen "
             style={{
               backgroundImage:
                 "url(https://i.postimg.cc/fTQ2XLv4/pexels-mali-63238.jpg)",
             }}
           >
+
+
+
+            
             <div className="hero-overlay bg-opacity-40"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="max-w-md">
@@ -22,6 +25,10 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+
+
+
           {/* ------------------------------------------ */}
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide4" className="btn btn-circle">
@@ -32,8 +39,8 @@ const Home = () => {
             </a>
           </div>
         </div>
-        {/* ---------------------2222222------------------------- */}
-        <div id="slide2" className="carousel-item relative md:h-[800px] w-full">
+        /* ---------------------2222222------------------------- */}
+        <div id="slide2" className="carousel-item relative   w-full">
           <div
             className="hero min-h-screen"
             style={{
@@ -66,7 +73,7 @@ const Home = () => {
         </div>
         {/* ----------------------33333--------------------------- */}
 
-        <div id="slide3" className="carousel-item relative md:h-[800px] w-full">
+        <div id="slide3" className="carousel-item relative h-[70vh] w-full">
           <div
             className="hero min-h-screen"
             style={{
@@ -97,7 +104,7 @@ const Home = () => {
         </div>
 
         {/* -----------------------------44444-------------------------------------- */}
-        <div id="slide4" className="carousel-item relative md:h-[800px] w-full">
+        <div id="slide4" className="carousel-item relative w-full">
           <div
             className="hero min-h-screen"
             style={{

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,6 +15,10 @@ const Register = () => {
     }
 
  
+  //____After Register go Home page____//
+  const location = useLocation()
+  const navigate = useNavigate()
+  console.log("Location in the login page",location)
 
 
     const [error,setError] = useState("")
@@ -22,16 +26,17 @@ const Register = () => {
     
 
     const {createUser,setUser} = useContext(AuthContext);
+    
   const handleRegister = (event) => {
     event.preventDefault();
-    console.log(event.currentTarget);
-    const form = new FormData(event.currentTarget);
+    const form = event.target
+    const name = form.name.value
+    const photo = form.photo.value
+    const email = form.email.value
+    const password = form.password.value
+    const user = {name,photo,email,password}
+    console.log(user)
 
-    const  name= form.get('name')
-    const  photo= form.get('photo')
-    const email = form.get('email')
-    const password = form.get('password')
-    console.log(name,photo,email,password)
 
 
   //_____Reset error______//
@@ -45,12 +50,17 @@ const Register = () => {
    }
 
   
+
+  
    
       // Register User_____________
   createUser( email,password,name,photo)
   .then(result => {
       setUser(result.user)
     setSuccess("User Created Successfully")
+    event.target.reset()
+        //______navigate after Register_____//
+        navigate(location?.state ? location.state : '/')
   })
 
   .catch(error =>{
