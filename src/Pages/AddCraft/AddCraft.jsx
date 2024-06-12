@@ -10,14 +10,18 @@ const AddCraft = () => {
   e.preventDefault()
   // console.log(user);
 
-  const name =e.target.name.value
-  const price =e.target.price.value
+  const Category_Name =e.target.Category_Name.value
   const image =e.target.image.value
-  const type =e.target.type.value
+  const Subcategory_Name =e.target.Subcategory_Name.value
+  const Short_Description =e.target.Short_Description.value
+  const price =e.target.price.value
   const rating =e.target.rating.value
+  const Customization =e.target.Customization.value
+  const Processing_Time =e.target.Processing_Time.value
   const email =user.email
+  //  const type = e.target.type.value;
   // console.log('Kkkkkkkkkkkkkkkk');
-  const info = {name,price,image,type,rating,email}
+  const info = {Category_Name,price,image,Subcategory_Name,Short_Description,rating,Customization,Processing_Time,email}
   console.log(info);
 
 
@@ -44,6 +48,7 @@ const AddCraft = () => {
 }
 
   return (
+    
     <div>
       <div className="shadow-lg p-5 border dark:bg-[#1a2641d5]">
         {/* form */}
@@ -51,37 +56,47 @@ const AddCraft = () => {
           <div className="flex gap-8 ">
             <div className="flex-1">
               <label className="block mb-2 dark:text-white" htmlFor="name">
-                Name
+              <span className="text-xl font-bold">Category_Name</span>
               </label>
               <input
                 className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                 type="text"
-                placeholder="Name"
-                id="name"
-                name="name"
+                placeholder="Category_Name"
+                id="Category_Name"
+                name="Category_Name"
               />
+
 
               <label
                 className="block mt-4 mb-2 dark:text-white"
                 htmlFor="brand"
               >
-                Brand Name
+                 <span className="text-xl font-bold">Subcategory_Name</span>
               </label>
               <select
-                name="brand"
-                id="brand"
+                name="Subcategory_Name"
+                id="Subcategory_Name"
                 className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                 type="text"
                 placeholder="Select Brand"
               >
-                <option value="Test" selected>
-                  Test
+                <option value="Landscape Painting" >
+                Landscape Painting
                 </option>
-                <option value="Test2" selected>
-                  Test2
+                <option value="Portrait Drawing" >
+                Portrait Drawing
                 </option>
-                <option value="Test3" selected>
-                  Test3
+                <option value="WaterColor Painting" >
+                WaterColor Painting
+                </option>
+                <option value="Test4" >
+                Oil Painting
+                </option>
+                <option value="Charcoal Sketching" >
+                Charcoal Sketching
+                </option>
+                <option value="Test6" >
+                Cartoon Drawing
                 </option>
               </select>
 
@@ -89,7 +104,7 @@ const AddCraft = () => {
                 className="block mt-4 mb-2 dark:text-white"
                 htmlFor="price"
               >
-                Price
+                <span className="text-xl font-bold">Price</span>
               </label>
               <input
                 className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
@@ -98,35 +113,59 @@ const AddCraft = () => {
                 id="Price"
                 name="price"
               />
+              {/* _____________________*/}
+              
+              <label
+                className="block mt-4 mb-2 dark:text-white"
+                htmlFor="brand"
+              >
+                  <span className="text-xl font-bold">Customization</span>
+              </label>
+              <select
+                name="Customization"
+                id="Customization"
+                className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
+                type="text"
+                placeholder="Select Brand"
+              >
+                <option value="Yes !" >
+                  Yes !
+                </option>
+                <option value="No !">
+                  No !
+                </option>
+                   
+              </select>
+              {/* -__________________ */}
             </div>
             {/* Right side */}
             <div className="flex-1">
               <label className="block mb-2 dark:text-white" htmlFor="image">
-                Image
+                <span className="text-xl font-bold">Image</span>
               </label>
               <input
                 className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
-                type="text"
+                type= "text"
                 placeholder="Enter Image URL"
                 id="image"
                 name="image"
               />
               <label className="block mb-2 mt-4 dark:text-white" htmlFor="type">
-                Type
+              <span className="text-xl font-bold">Short_Description</span>
               </label>
               <input
                 className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                 type="text"
-                placeholder="Enter type"
-                id="type"
-                name="type"
+                placeholder="Short_Description"
+                id="Short_Description"
+                name="Short_Description"
               />
 
               <label
                 className="block mt-4 mb-2 dark:text-white"
                 htmlFor="rating"
               >
-                Rating
+                <span className="text-xl font-bold">Rating</span>
               </label>
               <input
                 className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
@@ -137,6 +176,23 @@ const AddCraft = () => {
                 placeholder="Enter Rating"
                 id="rating"
                 name="rating"
+              />
+              {/* ____________ */}
+              <label
+                className="block mt-4 mb-2 dark:text-white"
+                htmlFor="rating"
+              >
+                 <span className="text-xl font-bold">Processing_Time</span>
+              </label>
+              <input
+                className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
+                maxLength={500000000}
+                max={500000000}
+                min={0}
+                type="number || text"
+                placeholder="1/2...Days"
+                id="Processing_Time"
+                name="Processing_Time"
               />
             </div>
           </div>

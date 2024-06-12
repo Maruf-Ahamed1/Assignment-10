@@ -11,7 +11,7 @@ const Footer = () => {
         <aside>
             <div className="flex">
                 <img className="w-12 h-12" src="/logo.png" alt="" />
-               <p className="mt-4 font-bold"> ACME Industries Ltd.</p>
+               <p className="mt-4 font-bold"> ArtMaker Industries Ltd.</p>
             </div>
 
           <p>

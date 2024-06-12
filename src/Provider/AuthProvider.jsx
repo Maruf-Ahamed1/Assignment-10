@@ -95,15 +95,3 @@ AuthProvider.propTypes ={
 
 
 
-
-
-// //__________GoogleSignIN___________//
-// const signInWithGoogle = () =>{
-//     setLoading(true)
-//     return signInWithPopup(auth,GoogleAuthProvider)
-// }
-// //_________facebookSignIn__________//
-// const SingInWithFacebook = () =>{
-// setLoading(true)
-// return signInWithPopup(auth,FacebookAuthProvider)
-// }
