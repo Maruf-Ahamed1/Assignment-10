@@ -37,6 +37,20 @@ const handleUpdate =(e) => {
         console.log(data)
         })
 
+     const handleUpdate = (e) =>  {
+      e.preventDefault()
+    
+      const Category_Name =e.target.Category_Name.value
+      const price =e.target.price.value
+      const info = {Category_Name,price}
+      fetch(`http://localhost:5000/updateCraft/${id}`,{
+        method:"PUT",
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(info)
+      })
+     } 
 
 }
 

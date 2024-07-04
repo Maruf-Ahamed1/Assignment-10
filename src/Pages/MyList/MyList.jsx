@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const MyList = () => {
   const { user } = useContext(AuthContext);
   const [items, setItem] = useState([]);
+  const [control, setControl] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5000/my/${user?.email}`)
@@ -13,7 +14,7 @@ const MyList = () => {
       .then((data) => {
         setItem(data);
       });
-  }, [user]);
+  }, [user,control]);
 
   const handleDelete = (id) => {
     console.log(id);
@@ -38,6 +39,7 @@ const MyList = () => {
           .then((data) => {
             console.log(data);
             if (data.deletedCount > 0) {
+              setControl(!control)
               Swal.fire({
                 title: "Deleted!",
                 text: "Your Craft has been deleted.",
