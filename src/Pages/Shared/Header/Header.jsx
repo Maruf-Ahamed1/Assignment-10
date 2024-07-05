@@ -23,8 +23,6 @@ const Header = () => {
         <span className="-mt-1 ml-5">
           <BreakingNews></BreakingNews>
 
-
-
         </span>
 
        

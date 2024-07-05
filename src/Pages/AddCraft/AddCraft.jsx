@@ -89,13 +89,13 @@ const AddCraft = () => {
                 <option value="WaterColor Painting" >
                 WaterColor Painting
                 </option>
-                <option value="Test4" >
+                <option value="Oil Painting" >
                 Oil Painting
                 </option>
                 <option value="Charcoal Sketching" >
                 Charcoal Sketching
                 </option>
-                <option value="Test6" >
+                <option value="Cartoon Drawing" >
                 Cartoon Drawing
                 </option>
               </select>
@@ -198,7 +198,7 @@ const AddCraft = () => {
           </div>
 
           <input
-            className="px-4 w-full py-2 mt-4 rounded hover:bg-[#ab3154]  bg-[#FF497C] duration-200 text-white cursor-pointer font-semibold"
+            className="px-4 w-full py-3 mt-10 rounded hover:bg-[#ab3154]  bg-[#FF497C] duration-200 text-white cursor-pointer font-semibold"
             type="submit"
             value="Add Product"
           />

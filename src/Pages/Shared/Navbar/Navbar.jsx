@@ -100,7 +100,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end  ">
-        <div className="md:flex md:gap-4 hidden">
+        <div className="md:flex md:gap-0 hidden">
           {/* ----------------------------------------------------- */}
 
           {user && (
@@ -115,7 +115,7 @@ const Navbar = () => {
             </div>
           )}
 
-          <div className="text-yellow-500 mt-2">{user && user?.email}</div>
+          <div className="text-orange-600 mt-3 lg:text-sm">{user && user?.email}</div>
 
           {user ? (
             <button onClick={handleSignOut} className="btn">
@@ -146,8 +146,8 @@ const Navbar = () => {
           <label className="flex cursor-pointer gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              // width="10"
+              // height="10"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -165,8 +165,8 @@ const Navbar = () => {
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              // width="10"
+              // height="10"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
