@@ -80,7 +80,7 @@ const MyList = () => {
               {item.Customization}
             </h1>
             <div className="flex gap-10 justify-center">
-              <Link to={`/details/${item._id}`}>
+              <Link to={`/update/${item._id}`}>
                  <button className="btn btn-outline btn-success">Update</button>
               </Link>
               <button

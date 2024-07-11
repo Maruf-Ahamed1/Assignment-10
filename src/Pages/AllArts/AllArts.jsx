@@ -18,6 +18,8 @@ const AllArts = () => {
 
 
 
+
+
   return (
     <div>
       <h1 className="lg:text-4xl text-center">
@@ -44,7 +46,7 @@ const AllArts = () => {
                 {item.Customization}
               </h1>
               <div className="">
-                <Link to="/details">
+                <Link to={`/Details/${item._id}`}>
                 <button className="btn btn-outline btn-warning">View Details</button>
                 </Link>
               </div>
@@ -59,4 +61,6 @@ const AllArts = () => {
 export default AllArts;
 
 
+// 
+// "/details"
 // loader:({params})=>fetch(`http://localhost:5000/${params.id}`)

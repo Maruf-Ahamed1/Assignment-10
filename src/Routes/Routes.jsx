@@ -9,7 +9,8 @@ import MyList from "../Pages/MyList/MyList";
 import NotFound from "../Pages/NotFound/NotFound";
 import PrivateRoute from "../Pages/PrivateRoute/PrivateRoute";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
-import Update from "../Pages/Update/Update";
+// import Update from "../Pages/SingleDetails/SingleDetails";
+import SingleDetails from "../Pages/SingleDetails/SingleDetails";
 
 
 const router = createBrowserRouter([
@@ -47,15 +48,15 @@ const router = createBrowserRouter([
                 </PrivateRoute>
             },
             {
-                path: '/details/:id',
+                path: '/update/:id',
                 element:<PrivateRoute>
                     <ViewDetails></ViewDetails>
                 </PrivateRoute>,
             },
             {
-                path: '/update/:id',
+                path: '/Details/:id',
                 element:<PrivateRoute>
-                    <Update></Update>,
+                    <SingleDetails></SingleDetails>,
                 </PrivateRoute>
             },
         ]
