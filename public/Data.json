@@ -1,0 +1,57 @@
+[
+    {
+      "id": "1",
+      "Subcategory_Name": "Landscape Painting",
+      "image": "https://i.postimg.cc/DfqzGbVL/Mountain-view-canvas.jpg",
+      "Price": 40,
+      "rating": 4.6,
+      "Customization": "YES",  
+      "Description": "Above the mountains, the sky is a mesmerizing gradient of colors, transitioning from a soft, pastel pink near the horizon to a deep, rich blue at the top of the canvas. Fluffy, white clouds are scattered across the sky, their edges tinged with the warm colors of the setting sun."
+    },
+    {
+      "id": "2",
+      "Subcategory_Name": "Portrait Drawing",
+      "image": "https://i.postimg.cc/xTRm9ZYb/Pencil-Sketch-Portrait.jpg",
+      "Price": 60,
+      "rating": 4,
+      "Customization": "NO",  
+      "Description": "A pencil sketch portrait is a classic and intimate art form that captures the likeness and personality of a person through delicate lines and shading. It focuses on capturing details such as facial features, expressions, and textures with the subtlety and nuance that pencil allows. Often used for its ability to convey emotion and depth, pencil sketch portraits range from quick, expressive sketches to highly detailed renderings, showcasing the artist's skill in capturing the essence of the subject."
+    },
+    {
+      "id": "3",
+      "Subcategory_Name": "WaterColor Painting",
+      "image": "https://i.postimg.cc/26Q62qSB/Floral-Watercolor-Art.jpg",
+      "Price": 55,
+      "rating": 3.7,
+      "Customization": "NO",  
+      "Description": "The watercolor painting showcases a serene landscape, rendered with the ethereal quality that only watercolor can provide. The artist has expertly used the medium’s inherent transparency and fluidity to create a scene that is both vibrant and calming."
+    },
+    {
+      "id": "4",
+      "Subcategory_Name": "Oil Painting",
+      "image": "https://i.postimg.cc/nz27wRby/abstract-oil-painting-2.jpg",
+      "Price": 100,
+      "rating": 4.2,
+      "Customization": "YES",  
+      "Description": "Abstract oil painting is a contemporary art form that emphasizes shape, color, and texture over realistic representation. It often conveys emotions, concepts, or ideas through non-representational forms. Characterized by fluidity and complexity, abstract oil paintings invite viewers to interpret and connect with the artwork on a personal level."
+    },
+    {
+      "id": "5",
+      "Subcategory_Name": "Charcoal Sketching",
+      "image": "https://i.postimg.cc/7LD583Vw/Architectural-Charcoal.jpg",
+      "Price": 80,
+      "rating": 4.9,
+      "Customization": "NO",  
+      "Description": "A figure charcoal sketch is a dynamic and expressive form of art that captures the essence and movement of the human figure using charcoal as the medium. It focuses on capturing the gestures, proportions, and shadows of the figure with bold strokes and subtle shading. Charcoal's versatility allows artists to create both detailed renderings and expressive, gestural sketches that convey mood and emotion effectively."
+    },
+    {
+      "id": "6",
+      "Subcategory_Name": "Cartoon Drawing",
+      "image": "https://i.postimg.cc/jSY5PHBP/Superhero-Cartoon-Design.jpg",
+      "Price": 30,
+      "rating": 5,
+      "Customization": "NO",  
+      "Description": "Superhero cartoon design is a vibrant and imaginative genre that blends fantastical elements with exaggerated proportions and dynamic poses. It often features characters with extraordinary abilities, distinct costumes, and strong, heroic expressions. These designs emphasize bold lines, bright colors, and larger-than-life personalities to convey themes of courage, justice, and adventure, appealing to audiences of all ages with their iconic and memorable visual style."
+    }
+  
+]

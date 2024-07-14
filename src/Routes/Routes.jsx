@@ -9,8 +9,11 @@ import MyList from "../Pages/MyList/MyList";
 import NotFound from "../Pages/NotFound/NotFound";
 import PrivateRoute from "../Pages/PrivateRoute/PrivateRoute";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
-// import Update from "../Pages/SingleDetails/SingleDetails";
 import SingleDetails from "../Pages/SingleDetails/SingleDetails";
+import SixView from "../Pages/SixView/SixView";
+
+
+
 
 
 const router = createBrowserRouter([
@@ -59,6 +62,13 @@ const router = createBrowserRouter([
                     <SingleDetails></SingleDetails>,
                 </PrivateRoute>
             },
+            {
+                path: '/Six/:id',
+                element:<SixView></SixView>,
+                loader: () => fetch('../Data.json')
+            }
+         
+          
         ]
     }
 ])

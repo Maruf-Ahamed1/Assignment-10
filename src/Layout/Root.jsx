@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../Pages/Shared/Header/Header";
 import Navbar from "../Pages/Shared/Navbar/Navbar";
 import Footer from "../Pages/Footer/Footer";
+import Featured from "../Pages/Featured/Featured";
 
 const Root = () => {
     return (
@@ -9,6 +10,7 @@ const Root = () => {
             <Header className="sm:hidden"></Header>
             <Navbar ></Navbar>
             <Outlet></Outlet>
+            
             <Footer></Footer>
         </div>
     );

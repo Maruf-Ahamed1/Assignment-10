@@ -154,7 +154,7 @@ const ViewDetails = () => {
                 placeholder="Enter Rating"
                 id="rating"
                 name="rating"
-                defaultValue={details.Short_Description}
+                defaultValue={details.rating}
               />
 
 

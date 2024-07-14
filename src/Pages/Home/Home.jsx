@@ -1,7 +1,10 @@
+import Featured from "../Featured/Featured";
+
 const Home = () => {
   return (
     <div>
       <div className="carousel w-full">
+        
         {//_______________________--111111________________________ */}
         <div id="slide1" className="carousel-item relative  w-full">
           <div
@@ -73,7 +76,7 @@ const Home = () => {
         </div>
         {/* ----------------------33333--------------------------- */}
 
-        <div id="slide3" className="carousel-item relative h-[70vh] w-full">
+        <div id="slide3" className="carousel-item relative w-full">
           <div
             className="hero min-h-screen"
             style={{
@@ -133,7 +136,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+        <Featured></Featured>
     </div>
+          
+            
   );
 };
 
